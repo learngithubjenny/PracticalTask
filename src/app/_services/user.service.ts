@@ -12,7 +12,7 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   getPublicContent(): Observable<any> {
-    return this.http.get(API_URL + 'all', { responseType: 'text' });
+    return this.http.get(`https://reqres.in/api/users?page=2`, { responseType: 'text' });
   }
 
   getUserBoard(): Observable<any> {
